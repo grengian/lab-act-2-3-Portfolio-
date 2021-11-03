@@ -53,79 +53,82 @@ const style = {
 export default function Main() {
   return (
     <Box sx={{ backgroundColor: (theme) => theme.palette.background.default }}>
-      <HeadBar />
-      <Social />
       <Box>
-        <Paper elevation={0}>
-          <Grid>
-            <Grid>
-              <Typography
-                variant="h1"
-                sx={{ ...style.setHeader, marginTop: 10 }}
-              >
-                Christian Grengia
-              </Typography>
-            </Grid>
-            <Grid>
-              <Typography
-                variant="subtitle1"
-                sx={{ ...style.setSubtitle, marginBottom: "20px" }}
-              >
-                Full Stack Web Developer
-              </Typography>
-            </Grid>
-            <Grid sx={style.setImage}>
-              <Avatar src={UserMe} sx={{...style.setMe, marginBottom: "80px"}} />
-            </Grid>
-          </Grid>
-        </Paper>
-      </Box>
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <HeadBar />
         <Box>
+          <Paper elevation={0}>
+            <Grid>
+              <Grid>
+                <Typography
+                  variant="h1"
+                  sx={{ ...style.setHeader, marginTop: 10 }}
+                >
+                  Christian Grengia
+                </Typography>
+              </Grid>
+              <Grid>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ ...style.setSubtitle, marginBottom: "20px" }}
+                >
+                  Full Stack Web Developer
+                </Typography>
+              </Grid>
+              <Grid sx={style.setImage}>
+                <Avatar
+                  src={UserMe}
+                  sx={{ ...style.setMe, marginBottom: "80px" }}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <ComputerIcon />
         </Box>
+        <Box sx={style.setIntro}>
+          <Grid sx={{ marginTop: 8 }}>
+            <Grid>
+              <Typography variant="h6" sx={style.setSubtitle}>
+                Hi, I'm Ian. Nice to meet you.
+              </Typography>
+            </Grid>
+            <Grid>
+              <Typography
+                variant="subtitle2"
+                sx={{ ...style.setSubtitle, maxWidth: "800px", marginTop: 3 }}
+              >
+                I am a freshly student programmer that simple and
+                non-experienced developer. I build code with passion. I'm also
+                willing to learn more new things in coding.
+              </Typography>
+            </Grid>
+          </Grid>
+        </Box>
+        <SkillInfo />
+        <WorkInfo />
+        <Box
+          sx={{
+            padding: "80px 5px",
+            backgroundColor: (theme) => theme.palette.secondary.main,
+          }}
+        >
+          <Grid sx={style.setFooter}>
+            <Grid>
+              <MeIcon />
+            </Grid>
+            <Grid>
+              <Typography>
+                First, solve the problem. Then, write the code
+              </Typography>
+            </Grid>
+            <Grid>
+              <Typography>Handcrafted by me ©grengian_</Typography>
+            </Grid>
+          </Grid>
+        </Box>
       </Box>
-      <Box sx={style.setIntro}>
-        <Grid sx={{ marginTop: 8 }}>
-          <Grid>
-            <Typography variant="h6" sx={style.setSubtitle}>
-              Hi, I'm Ian. Nice to meet you.
-            </Typography>
-          </Grid>
-          <Grid>
-            <Typography
-              variant="subtitle2"
-              sx={{ ...style.setSubtitle, maxWidth: "800px", marginTop: 3 }}
-            >
-              I am a freshly student programmer that simple and non-experienced
-              developer. I build code with passion. I'm also willing to learn
-              more new things in coding.
-            </Typography>
-          </Grid>
-        </Grid>
-      </Box>
-      <SkillInfo />
-      <WorkInfo />
-      <Box
-        sx={{
-          padding: "80px 5px",
-          backgroundColor: (theme) => theme.palette.secondary.main,
-        }}
-      >
-        <Grid sx={style.setFooter}>
-          <Grid>
-            <MeIcon />
-          </Grid>
-          <Grid>
-            <Typography>
-              First, solve the problem. Then, write the code
-            </Typography>
-          </Grid>
-          <Grid>
-            <Typography>Handcrafted by me ©grengian_</Typography>
-          </Grid>
-        </Grid>
-      </Box>
+      <Social />
     </Box>
   );
 }
